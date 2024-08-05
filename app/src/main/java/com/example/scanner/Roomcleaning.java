@@ -1,10 +1,13 @@
 package com.example.scanner;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import androidx.appcompat.widget.SearchView;
+import android.view.View;
+import android.widget.ImageView;
 
+import androidx.appcompat.widget.SearchView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -26,6 +29,7 @@ public class Roomcleaning extends AppCompatActivity {
     private static List<RoomDetails> roomDetailsList; // Original list
     private static List<RoomDetails> filteredRoomDetailsList; // Filtered list
 
+    private static ImageView arrowback;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,16 @@ public class Roomcleaning extends AppCompatActivity {
         recyclerView = findViewById(R.id.ROOMCleaningrecyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        arrowback=findViewById(R.id.arrowback);
+
+        arrowback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Roomcleaning.this,GridActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         // Set up SearchView
         SearchView searchView = findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -102,8 +116,15 @@ public class Roomcleaning extends AppCompatActivity {
         @Override
         protected void onPostExecute(List<RoomDetails> roomDetails) {
             if (roomDetails != null) {
-                roomDetailsList = roomDetails; // Save original list
-                filteredRoomDetailsList = new ArrayList<>(roomDetails); // Initialize filtered list
+                // Filter based on action value
+                roomDetailsList = new ArrayList<>();
+                for (RoomDetails room : roomDetails) {
+                    if ("1".equals(String.valueOf(room.getAction()))) {
+                        roomDetailsList.add(room);
+                    }
+                }
+
+                filteredRoomDetailsList = new ArrayList<>(roomDetailsList); // Initialize filtered list
                 roomAdapter = new RoomAdapter(filteredRoomDetailsList, Roomcleaning.this);
                 recyclerView.setAdapter(roomAdapter);
             }
