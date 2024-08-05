@@ -382,18 +382,22 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
         public PostRequestTask2(int position) {
             this.position = position; // Initialize with the position
         }
+
         @Override
         protected Boolean doInBackground(Integer... params) {
             int roomNo = params[0];
-            int itdId = params[1];
+            int itdId = params[1]; // Ensure this is the correct ID
             try {
-                URL url = new URL("http://www.anasumrah.com/anasws/api/users/updateCleanStatus");
+                URL url = new URL("http://www.anasumrah.com/anasws/api/users/cleanupdate");
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("POST");
                 conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
                 conn.setDoOutput(true);
 
-                String postData = "roomNo=" + roomNo + "&itdId=" + itdId;
+                // Updated postData with the correct parameter name
+                String postData = "roomNo=" + roomNo + "&ITD_HOTEL_ID=" + itdId;
+                Log.d("PostRequestTask2", "Sending: " + postData); // Log the request parameters
+
                 OutputStream os = conn.getOutputStream();
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
                 writer.write(postData);
@@ -422,4 +426,5 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
             }
         }
     }
+
 }
