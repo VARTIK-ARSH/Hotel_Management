@@ -20,17 +20,24 @@
         android:theme="@style/Theme.Scanner"
         tools:targetApi="31">
         <activity
-            android:name=".Checkout"
+            android:name=".ErrorActivity"
             android:exported="false" />
+        <activity
+            android:name=".Checkout"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Keystatus"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Roomcleaning"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Roomstatus"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".GridActivity"
             android:exported="false"

@@ -35,7 +35,7 @@
                 android:id="@+id/action_button"
                 android:layout_width="110sp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20sp"
+                android:layout_marginLeft="60sp"
                 android:text=""
                 android:background="@drawable/btnbackground"
                 android:textColor="@color/white"
@@ -44,10 +44,10 @@
 
             <Button
                 android:id="@+id/clean_action_button"
-                android:layout_width="80sp"
+                android:layout_width="110sp"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:layout_marginLeft="15sp"
+                android:layout_marginLeft="60sp"
                 android:background="@drawable/btnbackground"
                 android:textColor="@color/white"
                 android:textSize="16sp"

@@ -5,6 +5,15 @@ public class RoomDetails {
     private int action; // 1 for checkout
     private int clean_status; // 1 for clean, 0 for dirty
     private int itd_ID;
+    private int itd_HOTEL_ID;
+
+    public int getITD_HOTEL_ID() {
+        return itd_HOTEL_ID;
+    }
+
+    public void setITD_HOTEL_ID(int itd_HOTEL_ID) {
+        this.itd_HOTEL_ID = itd_HOTEL_ID;
+    }
 
     public int getRoom_no() {
         return room_no;

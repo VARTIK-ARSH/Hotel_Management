@@ -21,10 +21,10 @@ import java.util.List;
 
 public class Roomcleaning extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-    private RoomAdapter roomAdapter;
-    private List<RoomDetails> roomDetailsList; // Original list
-    private List<RoomDetails> filteredRoomDetailsList; // Filtered list
+    private static RecyclerView recyclerView;
+    private static RoomAdapter roomAdapter;
+    private static List<RoomDetails> roomDetailsList; // Original list
+    private static List<RoomDetails> filteredRoomDetailsList; // Filtered list
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,10 +51,10 @@ public class Roomcleaning extends AppCompatActivity {
         });
 
         // Fetch room details
-        new FetchRoomDetailsTask().execute("http://192.168.29.67:8080/api/users/details");
+        new FetchRoomDetailsTask().execute("http://www.anasumrah.com/anasws/api/users/details");
     }
 
-    private class FetchRoomDetailsTask extends AsyncTask<String, Void, List<RoomDetails>> {
+    public class FetchRoomDetailsTask extends AsyncTask<String, Void, List<RoomDetails>> {
 
         @Override
         protected List<RoomDetails> doInBackground(String... urls) {
