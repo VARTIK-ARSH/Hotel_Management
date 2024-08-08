@@ -1,0 +1,364 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                app:cardCornerRadius="20sp"
+                app:cardBackgroundColor="#FD6606"
+                android:padding="30sp"
+                android:elevation="4sp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Trip Code:"
+                            android:padding="5sp"
+                            android:textSize="20sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/trip_code"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="#000" />
+
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Agent Code:"
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/agent_code"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="10sp"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="#000" />
+
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="In Date:"
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/in_date"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="#000" />
+
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Nights:"
+                            android:padding="5sp"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/nights"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="5sp"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="#000" />
+
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Out Date:"
+                            android:padding="5sp"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/out_date"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginBottom="10sp"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="#000" />
+
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Room Type:"
+                            android:padding="5sp"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/room_type"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginBottom="10sp"
+                            android:textColor="@color/white" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="#000" />
+
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Room No."
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/room_no"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="5sp"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="#000" />
+
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Status:"
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/status"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="#000" />
+
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Guest Name:"
+                            android:padding="5sp"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/guest_name"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="5sp"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="#000" />
+                    <TableRow
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Contact No."
+                            android:textSize="20sp"
+                            android:padding="5sp"
+                            android:layout_marginLeft="20sp"
+                            android:visibility="visible"
+                            android:layout_marginBottom="10sp"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="1sp"
+                            android:layout_height="match_parent"
+                            android:background="#000" />
+                        <TextView
+                            android:id="@+id/contact"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="5sp"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:textColor="@color/white"
+                            />
+                    </TableRow>
+                </TableLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+

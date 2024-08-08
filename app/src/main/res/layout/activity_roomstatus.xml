@@ -1,26 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     tools:context=".Roomstatus">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40sp"
         android:background="#FD6606"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
         <ImageView
             android:id="@+id/arrowback"
             android:layout_width="40sp"
             android:layout_height="40sp"
             android:paddingLeft="10sp"
-            android:src="@drawable/baseline_arrow_back_24"
-            >
-
-        </ImageView>
+            android:src="@drawable/baseline_arrow_back_24" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40sp"
@@ -29,20 +27,57 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="20sp">
-        </TextView>
+            android:textSize="20sp" />
     </LinearLayout>
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_view"
+
+    <EditText
+        android:id="@+id/inputroom_no"
+        android:layout_width="300sp"
+        android:layout_height="40sp"
+        android:background="@drawable/edittextbackground"
+        android:hint="Enter Room No..."
+        android:textSize="25sp"
+        android:inputType="number"
+        android:paddingLeft="15sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/find"
+            android:layout_width="300sp"
+            android:layout_height="50sp"
+            android:text="Find"
+            android:textSize="25sp"
+            android:layout_margin="30sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50sp"
+            android:textColor="#FAF7F7"
+            android:background="@drawable/btnbackground"
+            android:textStyle="bold" />
+        <ProgressBar
+            android:id="@+id/progressbarlogin"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="false" />
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text=""
+        android:visibility="visible"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_marginTop="10sp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible"/>
-
+        android:padding="10sp"
+        android:layout_height="wrap_content" />
 </LinearLayout>
